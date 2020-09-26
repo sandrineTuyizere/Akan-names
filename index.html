@@ -3,6 +3,8 @@
     <head>
         <title>akan names generator</title>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js">
+        </script>
     </head>
     <body>
         <h2>Know your Akan name</h2>
@@ -48,7 +50,8 @@
         </div>
 
         <h2>Know your Akan name</h2>
-        <div id="the forms">
+        <div id="the forms" >
+            <form onsubmit="return results()">
             <h4>fill your date of birth</h4>
             <label for="days">Day</label>
             <input type="number" id="day"><br><br>
@@ -58,12 +61,13 @@
             <input type="number"  id="year"><br><br>
 
             <label for="gender">gender</label>
-            <select id="gender" name="gender">
-                <option disabled selected></option>
-                <option>Male</option>
-                <option>Female</option>
+            <select id="gender">
+                <option disabled ></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
             </select><br><br>
             <input type="submit" value="Generate">
+            </form>
         </div>
     </body>
 </html>
