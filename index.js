@@ -2,22 +2,50 @@
  * main function that will be called on html form submit
  */
 function results() {
+    
     alert("Your Akan name is " + generateUserAkan());
 }
 
 /**
  * get data inserted in the form
+ * @throws error when the day or month is not valid and stop the whole program
  */
 function processUserData() {
     var day = parseInt(document.getElementById("day").value);
+
+    if (day <= 0 || day > 31 ){
+        alert("choose a valid day")
+        throw new Error();
+    }
     var month = parseInt(document.getElementById("month").value);
 
-    var year = document.getElementById("year").value;
-    var century = parseInt(year.slice(0, 2));
-    var yearPrefix = parseInt(year.slice(2, 4));
-    var dayOfBirth = Math.floor((((century / 4) - 2 * century - 1) + ((5 * yearPrefix / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
-    return dayOfBirth;
+    if (month <= 0 || month > 12){
+        alert("choose a valid Month")
+        throw new Error();
+    }
 
+    var year = document.getElementById("year").value;
+
+    if (year.length < 4){
+        year = addZerosLeft(year);
+        
+    }
+
+    var century = parseInt(year.slice(0, year.length-2));
+    var yearEnd = parseInt(year.slice(year.length-2));
+    var dayOfBirth = Math.floor((((century / 4) - 2 * century - 1) + ((5 * yearEnd / 4)) + ((26 * (month + 1) / 10)) + day) % 7);  
+    return dayOfBirth;
+}
+
+/**
+ * function take in a number (in string format ) and add 0 until it has 4 characters
+ * @param numInStr is the string number to add zeros to 
+ */
+function addZerosLeft(numInStr) {
+    while (numInStr.length < 4){
+        numInStr = "0" + numInStr;
+    }
+    return numInStr;
 }
 
 /**
@@ -30,9 +58,7 @@ function generateUserAkan() {
     if (gender == "male") {
         return handleMaleNames(processUserData())
     }
-
     return handleFemaleNames(processUserData());
-
 }
 
 /**
