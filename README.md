@@ -1,5 +1,4 @@
 ## Akan Names Project
-https://sandrinetuyizere.github.io/Akan-names/
 the project that generate akan names for the user. (created on 26th september 2020)
 
 ## Author
