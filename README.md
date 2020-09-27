@@ -1,4 +1,5 @@
 ## Akan Names Project
+https://sandrinetuyizere.github.io/Akan-names/
 the project that generate akan names for the user. (created on 26th september 2020)
 
 ## Author
@@ -32,6 +33,7 @@ Internet Connection
 use the command "git clone https://github.com/sandrineTuyizere/Akan-names.git in command line"
 
 ## GitHub Pages link for the Project
+https://sandrinetuyizere.github.io/Akan-names/
 
 ## support and contact details
 for more information,ideas or reccommendation you can reach to me by my email address : sadrauyizere@gmail.com
