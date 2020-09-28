@@ -24,9 +24,9 @@ the program will alert the akan name of user
 
 ## Setup and Installations
 ### Prerequisites
-Web browser (Google Chrome recommended)
-code editor (Visual studio code Recommended)
-Internet Connection
+* Web browser (Google Chrome recommended)
+* code editor (Visual studio code Recommended)
+* Internet Connection
 
 ### How to run the project
 use the command "git clone https://github.com/sandrineTuyizere/Akan-names.git in command line"
